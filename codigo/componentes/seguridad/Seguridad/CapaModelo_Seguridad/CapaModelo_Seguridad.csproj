@@ -74,6 +74,7 @@
     <Compile Include="Repositorios\ClsRepositorioRoles.cs" />
     <Compile Include="Repositorios\ClsRepositorioUsuarios.cs" />
     <Compile Include="Repositorios\ClsSentencias.cs" />
+    <Compile Include="Repositorios\ClsRepositorioDashboard.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
