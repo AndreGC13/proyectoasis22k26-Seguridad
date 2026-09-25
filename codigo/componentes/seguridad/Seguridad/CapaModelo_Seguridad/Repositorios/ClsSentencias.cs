@@ -1,19 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data;
 using System.Data.Odbc;
-/*
- * ==================================================================
- * Área: Seguridad
- * Autores: Lourdes Isabel Melendez Pineda
- * Fecha o ultima edicion: 23/09/2026
- * ==================================================================
- * Propósito : Clase base que hereda de la conexión y ejecuta las
- * sentencias SQL del sistema, ya sea para insertar,
- * editar o eliminar o para hacer
- * consultas que devuelven una tabla de resultados, con
- * o sin parámetros.
- * ===================================================================
- */
+
 namespace CapaModelo_Seguridad
 {
     public abstract class ClsSentencias : ClsConexion
@@ -34,6 +22,21 @@ namespace CapaModelo_Seguridad
                 }
             }
         }
+        // PARA NAVEGADOR
+        public int SeguridadMetEjecucionNonQuery(string ComandoTexto, List<OdbcParameter> Parametros, CommandType ComandoTipo, OdbcConnection Conexion, OdbcTransaction Transaccion)
+        {
+            using (var Comando = new OdbcCommand())
+            {
+                Comando.Connection = Conexion;
+                Comando.Transaction = Transaccion;
+                Comando.CommandText = ComandoTexto;
+                Comando.CommandType = ComandoTipo;
+                Comando.Parameters.AddRange(Parametros.ToArray());
+                return Comando.ExecuteNonQuery();
+            }
+        }
+        // PARA NAVEGADOR
+
         public DataTable SeguridadMetEjecucionConsulta(string ComandoTexto, CommandType ComandoTipo)
         {
             _TablaDatos = new DataTable();
@@ -48,7 +51,7 @@ namespace CapaModelo_Seguridad
                     using (var LectorDatos = Comando.ExecuteReader())
                         _TablaDatos.Load(LectorDatos);
                 }
-                return _TablaDatos; 
+                return _TablaDatos;
             }
         }
 
