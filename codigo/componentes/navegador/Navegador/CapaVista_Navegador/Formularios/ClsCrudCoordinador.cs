@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 
+
 namespace CapaVista_Navegador
 {
     public class ClsCrudCoordinador
@@ -177,7 +178,7 @@ namespace CapaVista_Navegador
                     {
                         _Grid.NavegadorMetFiltrarPorLlave(
                             ColumnaPK.Nombre,
-                            FormularioConsultas.CampoSeleccionado);
+                            FormularioConsultas.IdSeleccionado);
                     }
                 }
             }
