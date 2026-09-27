@@ -199,7 +199,7 @@ namespace CapaVista_Navegador
                 (Modificar && Columna.EsPK))
             {
                 if (!Modificar && Columna.EsAutoincremento)
-                    CampoTexto.Text = NavegadorFuncSiguienteLlave(Columna);
+                    CampoTexto.Text = "(automático)";
 
                 CampoTexto.ReadOnly = true;
                 CampoTexto.BackColor = Color.LightGray;
@@ -207,39 +207,7 @@ namespace CapaVista_Navegador
 
             return CampoTexto;
         }
-        //Genera actomaticamente la siguiente llave primaria
-        private string NavegadorFuncSiguienteLlave(ClsColumnaInfo Columna)
-        {
-            try
-            {
-                //Consigue los registros de la tabla
-                DataTable TablaDatos = _CtrlTabla.NavegadorFuncLlenarDgv(_Tabla);
-                long UltimaLlave = 0;
 
-                //Verifica que la tabla y la columna existan
-                if (TablaDatos != null && TablaDatos.Columns.Contains(Columna.Nombre))
-                {
-                    //Busca la llave primaria mas alta en la tabla
-                    foreach (DataRow Fila in TablaDatos.Rows)
-                    {
-                        //La valida como llave primaria
-                        if (Fila[Columna.Nombre] != DBNull.Value &&
-                        long.TryParse(Fila[Columna.Nombre].ToString(), out long Valor) &&
-                        Valor > UltimaLlave)
-                        UltimaLlave = Valor;
-                    }
-                }
-                //Da la siguiente llave primaria
-                return (UltimaLlave + 1).ToString();
-            }
-            catch (Exception Excepcion)
-            {
-                // Muerta error si no la genera
-                MessageBox.Show("No se pudo generar la llave automática: " + Excepcion.Message,
-                "Llave primaria", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return "1";
-            }
-        }
         //Crea el combo con los valores disponibles de una llave foranea
         private Control NavegadorMetCrearCombo(ClsColumnaInfo Columna,
             bool Modificar, DataGridViewRow Fila, ClsCrudGrid Grid, int PosicionVertical)
@@ -427,9 +395,80 @@ namespace CapaVista_Navegador
         }
 
         //Valida que las llaves primarias no esten vacias ni duplicadas
-        public bool NavegadorFuncLlaveInvalida(DataGridView Grid, ClsCrudGrid GridControl)
+        public bool NavegadorFuncLlaveInvalida(
+            DataGridView Grid, ClsCrudGrid GridControl)
         {
-            // La validación de unicidad de llaves primarias se delegó al Controlador
+            //No valida llaves cuando se esta modificando un registro
+            if (_ModoModificar || _Controles == null)
+                return false;
+
+            List<ClsColumnaInfo> Llaves =
+                _Esquema.FindAll(Columna => Columna.EsPK);
+
+            Dictionary<string, string> Datos =
+                NavegadorFuncObtenerDatos();
+
+            //Verifica que las llaves primarias obligatorias tengan un valor
+            foreach (ClsColumnaInfo Columna in Llaves)
+            {
+                if (!Columna.EsAutoincremento &&
+                    (!Datos.ContainsKey(Columna.Nombre) ||
+                     string.IsNullOrEmpty(Datos[Columna.Nombre])))
+                {
+                    MessageBox.Show(
+                        "Debe ingresar un valor para la llave primaria '" +
+                        Columna.Nombre + "'.",
+                        "Llave primaria",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+
+                    NavegadorMetEnfocar(Columna.Nombre);
+                    return true;
+                }
+            }
+
+            //Continua sin validar duplicados si no hay datos del grid
+            if (Grid == null || GridControl == null)
+                return false;
+
+            //Compara las llaves nuevas con los registros existentes
+            foreach (DataGridViewRow Fila in Grid.Rows)
+            {
+                if (Fila.IsNewRow)
+                    continue;
+
+                bool Coincide = true;
+
+                //Comprueba cada llave primaria del registro
+                foreach (ClsColumnaInfo Columna in Llaves)
+                {
+                    if (!Columna.EsAutoincremento &&
+                        !string.Equals(
+                            GridControl.NavegadorFuncObtenerValor(
+                                Fila, Columna.Nombre).Trim(),
+                            Datos[Columna.Nombre],
+                            StringComparison.OrdinalIgnoreCase))
+                    {
+                        Coincide = false;
+                        break;
+                    }
+                }
+
+                //Muestra advertencia cuando encuentra una llave duplicada
+                if (Coincide &&
+                    Llaves.Exists(Columna => !Columna.EsAutoincremento))
+                {
+                    MessageBox.Show(
+                        "Ya existe un registro con esa llave primaria.",
+                        "Llave duplicada",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+
+                    NavegadorMetEnfocar(Llaves[0].Nombre);
+                    return true;
+                }
+            }
+
             return false;
         }
 

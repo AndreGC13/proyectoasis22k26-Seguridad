@@ -1,20 +1,24 @@
-// Dylan Rene Hernandez Recinos 16/09/2026
+// Inicio - Roger Yankhel de Jesús Herrera Alcántara 0901-23-2429.
+// Inicio cambio - Gabriel André Guillén Pocón - 0901-23-1998: nombres ajustados a EST-10 (prefijo Cls, PascalCase).
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Text.RegularExpressions;
-using CapaEntidades_Navegador;
 using CapaModelo_Navegador;
 
 namespace CapaControlador_Navegador
 {
-    // Validación de atributos y validación en capa Controlador.
-    // Roger Yankhel de Jesús Herrera Alcántara 0901-23-2429.
-    public class ClsCtrlRegistro
+    // El sufijo "Attribute" lo exige C# para poder usarse como [ClsValidacionColumna].
+    [AttributeUsage(AttributeTargets.Property)]
+    public sealed class ClsValidacionColumnaAttribute : ValidationAttribute
     {
-        private readonly ClsRegistros _Registros = new ClsRegistros();
-        private readonly ClsEsquema _Esquema = new ClsEsquema();
-
+        protected override ValidationResult IsValid(object Valor, ValidationContext Contexto)
+        {
+            var Campo = (ClsModeloCampo)Contexto.ObjectInstance;
+            string Error = NavegadorFuncValidarAtributo((string)Valor, Campo.Columna);
+            return string.IsNullOrEmpty(Error) ? ValidationResult.Success
+                : new ValidationResult(Error, new[] { Campo.Columna == null ? "Valor" : Campo.Columna.Nombre });
+        }
         private static readonly string[] _TiposTexto =
         {
             "string", "char", "nchar", "varchar", "nvarchar", "varchar2",
@@ -53,119 +57,6 @@ namespace CapaControlador_Navegador
             "image", "rowversion"
         };
 
-        public bool NavegadorFuncExisteLlavePrimaria(
-            string NombreTabla,
-            string[] CamposPK,
-            string[] ValoresPK)
-        {
-            NavegadorMetValidarNombreTabla(NombreTabla);
-
-            if (CamposPK == null || ValoresPK == null ||
-                CamposPK.Length == 0 || CamposPK.Length != ValoresPK.Length)
-                throw new ArgumentException("La llave primaria no es válida.");
-
-            return _Registros.NavegadorFuncExisteLlavePrimaria(
-                NombreTabla, CamposPK, ValoresPK);
-        }
-
-        public bool NavegadorFuncExisteValorCampo(
-            string NombreTabla,
-            string NombreCampo,
-            string Valor)
-        {
-            NavegadorMetValidarNombreTabla(NombreTabla);
-
-            if (string.IsNullOrWhiteSpace(NombreCampo) || Valor == null)
-                throw new ArgumentException("El campo y su valor son obligatorios.");
-
-            return _Registros.NavegadorFuncExisteValorCampo(
-                NombreTabla, NombreCampo, Valor);
-        }
-
-        public bool NavegadorFuncInsertarRegistro(
-            string NombreTabla,
-            Dictionary<string, string> Datos)
-        {
-            NavegadorMetValidarDatos(NombreTabla, Datos, "insertar");
-            return _Registros.NavegadorFuncInsertarRegistro(NombreTabla, Datos);
-        }
-
-        public bool NavegadorFuncActualizarRegistro(
-            string NombreTabla,
-            Dictionary<string, string> Valores,
-            Dictionary<string, string> ClavesPrimarias)
-        {
-            NavegadorMetValidarColeccion(ClavesPrimarias, "llave primaria");
-            NavegadorMetValidarDatos(
-                NombreTabla,
-                NavegadorFuncCombinar(Valores, ClavesPrimarias),
-                "actualizar");
-
-            return _Registros.NavegadorFuncActualizarRegistro(
-                NombreTabla, Valores, ClavesPrimarias);
-        }
-
-        public bool NavegadorFuncEliminarRegistro(
-            string NombreTabla,
-            Dictionary<string, string> ClavesPrimarias)
-        {
-            NavegadorMetValidarColeccion(ClavesPrimarias, "llave primaria");
-            NavegadorMetValidarDatos(NombreTabla, ClavesPrimarias, "eliminar");
-            return _Registros.NavegadorFuncEliminarRegistro(NombreTabla, ClavesPrimarias);
-        }
-
-        // Valida dinámicamente los atributos existentes en cualquier esquema ODBC.
-        public List<string> NavegadorFuncValidarRegistro(
-    Dictionary<string, string> Datos,
-    string NombreTabla)
-{
-    NavegadorMetValidarNombreTabla(NombreTabla);
-    NavegadorMetValidarColeccion(Datos, "datos");
-
-    List<string> Errores = new List<string>();
-    List<ClsColumnaInfo> Columnas =
-        _Esquema.NavegadorFuncObtenerEsquemaTabla(NombreTabla);
-
-    if (Columnas == null || Columnas.Count == 0)
-        throw new InvalidOperationException("No se encontró el esquema de la tabla.");
-
-    foreach (KeyValuePair<string, string> Dato in Datos)
-    {
-        ClsColumnaInfo Columna = Columnas.Find(Item =>
-            string.Equals(Item.Nombre, Dato.Key, StringComparison.OrdinalIgnoreCase));
-
-        if (Columna == null)
-        {
-            Errores.Add("El atributo '" + Dato.Key + "' no existe en la tabla.");
-            continue;
-        }
-
-        string Error = NavegadorFuncValidarAtributo(Dato.Value, Columna);
-        if (!string.IsNullOrEmpty(Error)) Errores.Add(Error);
-
-        // Validar Llaves Foráneas directamente desde el controlador
-        if (Columna.EsFK && !string.IsNullOrWhiteSpace(Dato.Value) &&
-            !string.IsNullOrWhiteSpace(Columna.TablaFK) && !string.IsNullOrWhiteSpace(Columna.ColumnaFK))
-        {
-            try
-            {
-                bool ExisteFK = _Registros.NavegadorFuncExisteValorCampo(Columna.TablaFK, Columna.ColumnaFK, Dato.Value);
-                if (!ExisteFK)
-                {
-                    Errores.Add("La llave foránea '" + Columna.Nombre + "' con valor '" + Dato.Value +
-                        "' no existe en '" + Columna.TablaFK + "." + Columna.ColumnaFK + "'.");
-                }
-            }
-            catch (Exception)
-            {
-                // Si falla la consulta a la BD no bloqueamos al controlador
-            }
-        }
-    }
-
-    return Errores;
-}
-
         // Valida nulabilidad, longitud y tipo usando los metadatos reales de la columna.
         public string NavegadorFuncValidarAtributo(string Valor, ClsColumnaInfo Columna)
         {
@@ -173,7 +64,7 @@ namespace CapaControlador_Navegador
                 return "No se recibió la información del atributo.";
 
             if (string.IsNullOrWhiteSpace(Valor))
-                return !Columna.Nullable && !Columna.EsAutoincremento
+                return !Columna.Nullable && !Columna.EsAutoincremento && !new RequiredAttribute().IsValid(Valor)
                     ? "El atributo '" + Columna.Nombre + "' es obligatorio."
                     : "";
 
@@ -230,52 +121,13 @@ namespace CapaControlador_Navegador
                 long Limite = Columna.Longitud > 0
                     ? Columna.Longitud : Columna.TamanoColumna;
 
-                if (Limite > 0 && Valor.Length > Limite)
+                if (Limite > 0 && Limite <= int.MaxValue && !new StringLengthAttribute((int)Limite).IsValid(Valor))
                     return "El atributo '" + Columna.Nombre +
                         "' admite como máximo " + Limite + " caracteres.";
             }
 
             // Los tipos propios del motor se delegan al proveedor ODBC.
             return "";
-        }
-
-        private void NavegadorMetValidarDatos(
-            string NombreTabla,
-            Dictionary<string, string> Datos,
-            string Accion)
-        {
-            List<string> Errores = NavegadorFuncValidarRegistro(Datos, NombreTabla);
-            if (Errores.Count > 0)
-                throw new ArgumentException(
-                    "No se puede " + Accion + ":\n" + string.Join("\n", Errores.ToArray()));
-        }
-
-        private void NavegadorMetValidarNombreTabla(string NombreTabla)
-        {
-            if (string.IsNullOrWhiteSpace(NombreTabla))
-                throw new ArgumentException("El nombre de la tabla es obligatorio.");
-        }
-
-        private void NavegadorMetValidarColeccion(
-            Dictionary<string, string> Datos,
-            string Nombre)
-        {
-            if (Datos == null || Datos.Count == 0)
-                throw new ArgumentException("La colección de " + Nombre + " está vacía.");
-        }
-
-        private Dictionary<string, string> NavegadorFuncCombinar(
-            Dictionary<string, string> Valores,
-            Dictionary<string, string> Claves)
-        {
-            NavegadorMetValidarColeccion(Valores, "valores");
-            Dictionary<string, string> Resultado =
-                new Dictionary<string, string>(Valores, StringComparer.OrdinalIgnoreCase);
-
-            foreach (KeyValuePair<string, string> Clave in Claves)
-                Resultado[Clave.Key] = Clave.Value;
-
-            return Resultado;
         }
 
         private bool NavegadorFuncEsBooleano(ClsColumnaInfo Columna)
@@ -341,3 +193,5 @@ namespace CapaControlador_Navegador
         }
     }
 }
+// Fin cambio - Gabriel André Guillén Pocón - 0901-23-1998
+// Fin - Roger Yankhel de Jesús Herrera Alcántara 0901-23-2429.
