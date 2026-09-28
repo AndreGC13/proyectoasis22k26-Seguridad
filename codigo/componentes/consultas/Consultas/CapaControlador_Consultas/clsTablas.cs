@@ -5,8 +5,8 @@ namespace CapaControlador_Consultas
 {
     public class ClsTablas
     {
-        private readonly ClsSentenciasTablas _Sentencias =
-            new ClsSentenciasTablas();
+        //Inicio del código realizado por Carlos Andres Arriaza Lara 0901-23-13862
+        private readonly ClsSentenciasTablas _Sentencias = new ClsSentenciasTablas();
 
         public DataTable ConsultasFuncLlenarTabla(
             string NombreTabla,
@@ -28,5 +28,6 @@ namespace CapaControlador_Consultas
         {
             return _Sentencias.ConsultasFuncContarRegistros(NombreTabla);
         }
+        //Fin del código realizado por Carlos Andres Arriaza Lara 0901-23-13862
     }
 }
