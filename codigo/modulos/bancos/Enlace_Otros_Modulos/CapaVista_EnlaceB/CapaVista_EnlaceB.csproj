@@ -91,5 +91,26 @@
   <ItemGroup>
     <None Include="Resources\81.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_consultarV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_generarpartidaV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_limpiarV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_enviarV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_salirV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_advertenciaV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mascota bancaria.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

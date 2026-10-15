@@ -28,179 +28,165 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.BancLblTitulo = new System.Windows.Forms.Label();
+            this.BancPnlFiltros = new System.Windows.Forms.Panel();
+            this.BancLblFechaFinal = new System.Windows.Forms.Label();
+            this.BancLblFechaInicial = new System.Windows.Forms.Label();
+            this.BancLblTituloPanel = new System.Windows.Forms.Label();
+            this.BancLblMovimientos = new System.Windows.Forms.Label();
+            this.BancDgvMovimientos = new System.Windows.Forms.DataGridView();
             this.Estatus = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Referencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Concepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Póliza = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Importe_GTQ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.BancLblPartidaContable = new System.Windows.Forms.Label();
+            this.BancDgvPartidaContable = new System.Windows.Forms.DataGridView();
             this.Código_de_Cuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre_de_cuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Debe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Haber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.BancLblTotalDebe = new System.Windows.Forms.Label();
+            this.BancLblTotalHaber = new System.Windows.Forms.Label();
+            this.BancLblDiferencia = new System.Windows.Forms.Label();
+            this.BancLblTipoPeriodo = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.BancCbxPeriodo = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.BancPbxMascota = new System.Windows.Forms.PictureBox();
+            this.BancPbxBalanza = new System.Windows.Forms.PictureBox();
+            this.BancPbxBolsa = new System.Windows.Forms.PictureBox();
+            this.BancPbxMoneda = new System.Windows.Forms.PictureBox();
+            this.BancPbxDiferencia = new System.Windows.Forms.PictureBox();
+            this.BancPbxHaber = new System.Windows.Forms.PictureBox();
+            this.BancPbxDebe = new System.Windows.Forms.PictureBox();
+            this.BancBtnCerrar = new System.Windows.Forms.Button();
+            this.BancBtnEnviar = new System.Windows.Forms.Button();
+            this.BancBtnLimpiar = new System.Windows.Forms.Button();
+            this.BancPbxFondoPartida = new System.Windows.Forms.PictureBox();
+            this.BancBtnGenerarPartida = new System.Windows.Forms.Button();
+            this.BancPbxFondoMovimientos = new System.Windows.Forms.PictureBox();
+            this.BancBtnConsultarMovimientos = new System.Windows.Forms.Button();
+            this.BancPbxFondoEnlace = new System.Windows.Forms.PictureBox();
+            this.BancPbxFondo = new System.Windows.Forms.PictureBox();
+            this.BancPnlFiltros.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BancDgvMovimientos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancDgvPartidaContable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxMascota)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxBalanza)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxBolsa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxMoneda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxDiferencia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxHaber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxDebe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxFondoPartida)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxFondoMovimientos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxFondoEnlace)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxFondo)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // BancLblTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
-            this.label1.Location = new System.Drawing.Point(24, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(516, 55);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Enlace Otros Modulos";
+            this.BancLblTitulo.AutoSize = true;
+            this.BancLblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
+            this.BancLblTitulo.Font = new System.Drawing.Font("Lucida Bright", 36F, System.Drawing.FontStyle.Bold);
+            this.BancLblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
+            this.BancLblTitulo.Location = new System.Drawing.Point(18, 7);
+            this.BancLblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BancLblTitulo.Name = "BancLblTitulo";
+            this.BancLblTitulo.Size = new System.Drawing.Size(402, 54);
+            this.BancLblTitulo.TabIndex = 1;
+            this.BancLblTitulo.Text = "Enlace Modulos";
             // 
-            // panel1
+            // BancPnlFiltros
             // 
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(34, 86);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1107, 107);
-            this.panel1.TabIndex = 2;
+            this.BancPnlFiltros.Controls.Add(this.BancCbxPeriodo);
+            this.BancPnlFiltros.Controls.Add(this.dateTimePicker2);
+            this.BancPnlFiltros.Controls.Add(this.dateTimePicker1);
+            this.BancPnlFiltros.Controls.Add(this.BancLblTipoPeriodo);
+            this.BancPnlFiltros.Controls.Add(this.BancBtnConsultarMovimientos);
+            this.BancPnlFiltros.Controls.Add(this.BancLblFechaFinal);
+            this.BancPnlFiltros.Controls.Add(this.BancLblFechaInicial);
+            this.BancPnlFiltros.Controls.Add(this.BancLblTituloPanel);
+            this.BancPnlFiltros.Controls.Add(this.BancPbxFondoEnlace);
+            this.BancPnlFiltros.Location = new System.Drawing.Point(26, 70);
+            this.BancPnlFiltros.Margin = new System.Windows.Forms.Padding(2);
+            this.BancPnlFiltros.Name = "BancPnlFiltros";
+            this.BancPnlFiltros.Size = new System.Drawing.Size(830, 87);
+            this.BancPnlFiltros.TabIndex = 2;
             // 
-            // label2
+            // BancLblFechaFinal
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(300, 31);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Enlace Otros Modulos";
+            this.BancLblFechaFinal.AutoSize = true;
+            this.BancLblFechaFinal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
+            this.BancLblFechaFinal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BancLblFechaFinal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
+            this.BancLblFechaFinal.Location = new System.Drawing.Point(518, 39);
+            this.BancLblFechaFinal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BancLblFechaFinal.Name = "BancLblFechaFinal";
+            this.BancLblFechaFinal.Size = new System.Drawing.Size(90, 18);
+            this.BancLblFechaFinal.TabIndex = 6;
+            this.BancLblFechaFinal.Text = "Fecha final";
             // 
-            // label3
+            // BancLblFechaInicial
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
-            this.label3.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
-            this.label3.Location = new System.Drawing.Point(5, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 22);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Fecha inicial";
+            this.BancLblFechaInicial.AutoSize = true;
+            this.BancLblFechaInicial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
+            this.BancLblFechaInicial.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BancLblFechaInicial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
+            this.BancLblFechaInicial.Location = new System.Drawing.Point(248, 35);
+            this.BancLblFechaInicial.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BancLblFechaInicial.Name = "BancLblFechaInicial";
+            this.BancLblFechaInicial.Size = new System.Drawing.Size(102, 18);
+            this.BancLblFechaInicial.TabIndex = 4;
+            this.BancLblFechaInicial.Text = "Fecha inicial";
             // 
-            // comboBox1
+            // BancLblTituloPanel
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(154, 66);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 5;
+            this.BancLblTituloPanel.AutoSize = true;
+            this.BancLblTituloPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
+            this.BancLblTituloPanel.Font = new System.Drawing.Font("Lucida Bright", 20.25F, System.Drawing.FontStyle.Bold);
+            this.BancLblTituloPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
+            this.BancLblTituloPanel.Location = new System.Drawing.Point(2, 0);
+            this.BancLblTituloPanel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BancLblTituloPanel.Name = "BancLblTituloPanel";
+            this.BancLblTituloPanel.Size = new System.Drawing.Size(472, 31);
+            this.BancLblTituloPanel.TabIndex = 3;
+            this.BancLblTituloPanel.Text = "Traslado de partida a Contabilidad";
             // 
-            // label4
+            // BancLblMovimientos
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
-            this.label4.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
-            this.label4.Location = new System.Drawing.Point(344, 68);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 22);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Fecha final";
+            this.BancLblMovimientos.AutoSize = true;
+            this.BancLblMovimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
+            this.BancLblMovimientos.Font = new System.Drawing.Font("Lucida Bright", 20.25F, System.Drawing.FontStyle.Bold);
+            this.BancLblMovimientos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
+            this.BancLblMovimientos.Location = new System.Drawing.Point(28, 162);
+            this.BancLblMovimientos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BancLblMovimientos.Name = "BancLblMovimientos";
+            this.BancLblMovimientos.Size = new System.Drawing.Size(349, 31);
+            this.BancLblMovimientos.TabIndex = 9;
+            this.BancLblMovimientos.Text = "Movimientos del periodo";
             // 
-            // comboBox2
+            // BancDgvMovimientos
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(484, 68);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 7;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(138)))), ((int)(((byte)(85)))));
-            this.button1.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(792, 32);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(256, 39);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Consultar movimientos";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
-            this.label5.Location = new System.Drawing.Point(37, 199);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(310, 31);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Movimientos consultas";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.BancDgvMovimientos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
+            this.BancDgvMovimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BancDgvMovimientos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Estatus,
             this.Fecha,
             this.Referencia,
             this.Concepto,
             this.Póliza,
             this.Importe_GTQ});
-            this.dataGridView1.Location = new System.Drawing.Point(43, 233);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(641, 68);
-            this.dataGridView1.TabIndex = 10;
+            this.BancDgvMovimientos.Location = new System.Drawing.Point(28, 195);
+            this.BancDgvMovimientos.Margin = new System.Windows.Forms.Padding(2);
+            this.BancDgvMovimientos.Name = "BancDgvMovimientos";
+            this.BancDgvMovimientos.RowTemplate.Height = 24;
+            this.BancDgvMovimientos.Size = new System.Drawing.Size(655, 70);
+            this.BancDgvMovimientos.TabIndex = 10;
             // 
             // Estatus
             // 
@@ -232,80 +218,34 @@
             this.Importe_GTQ.HeaderText = "Importe_GTQ";
             this.Importe_GTQ.Name = "Importe_GTQ";
             // 
-            // button2
+            // BancLblPartidaContable
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(138)))), ((int)(((byte)(85)))));
-            this.button2.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(826, 260);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(256, 41);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Generar partida consolidada";
-            this.button2.UseVisualStyleBackColor = false;
+            this.BancLblPartidaContable.AutoSize = true;
+            this.BancLblPartidaContable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
+            this.BancLblPartidaContable.Font = new System.Drawing.Font("Lucida Bright", 20.25F, System.Drawing.FontStyle.Bold);
+            this.BancLblPartidaContable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
+            this.BancLblPartidaContable.Location = new System.Drawing.Point(28, 289);
+            this.BancLblPartidaContable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BancLblPartidaContable.Name = "BancLblPartidaContable";
+            this.BancLblPartidaContable.Size = new System.Drawing.Size(396, 31);
+            this.BancLblPartidaContable.TabIndex = 13;
+            this.BancLblPartidaContable.Text = "Partida contable consolidada";
             // 
-            // label6
+            // BancDgvPartidaContable
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
-            this.label6.Location = new System.Drawing.Point(37, 356);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(390, 31);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Partida contable consolidada";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Green;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(684, 611);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 31);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "Limpiar";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(138)))), ((int)(((byte)(85)))));
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(765, 611);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(176, 31);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "Enviar a Contabilidad";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Green;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(947, 611);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 31);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "Cerrar";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.BancDgvPartidaContable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
+            this.BancDgvPartidaContable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BancDgvPartidaContable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Código_de_Cuenta,
             this.Nombre_de_cuenta,
             this.Debe,
             this.Haber});
-            this.dataGridView2.Location = new System.Drawing.Point(64, 437);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(443, 54);
-            this.dataGridView2.TabIndex = 17;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.BancDgvPartidaContable.Location = new System.Drawing.Point(48, 338);
+            this.BancDgvPartidaContable.Margin = new System.Windows.Forms.Padding(2);
+            this.BancDgvPartidaContable.Name = "BancDgvPartidaContable";
+            this.BancDgvPartidaContable.RowTemplate.Height = 24;
+            this.BancDgvPartidaContable.Size = new System.Drawing.Size(452, 61);
+            this.BancDgvPartidaContable.TabIndex = 17;
             // 
             // Código_de_Cuenta
             // 
@@ -327,193 +267,341 @@
             this.Haber.HeaderText = "Haber";
             this.Haber.Name = "Haber";
             // 
-            // label7
+            // BancLblTotalDebe
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
-            this.label7.Location = new System.Drawing.Point(153, 522);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 15);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "Total Debe";
+            this.BancLblTotalDebe.AutoSize = true;
+            this.BancLblTotalDebe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
+            this.BancLblTotalDebe.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.BancLblTotalDebe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
+            this.BancLblTotalDebe.Location = new System.Drawing.Point(148, 420);
+            this.BancLblTotalDebe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BancLblTotalDebe.Name = "BancLblTotalDebe";
+            this.BancLblTotalDebe.Size = new System.Drawing.Size(73, 14);
+            this.BancLblTotalDebe.TabIndex = 24;
+            this.BancLblTotalDebe.Text = "Total Debe";
             // 
-            // label8
+            // BancLblTotalHaber
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
-            this.label8.Location = new System.Drawing.Point(399, 522);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 15);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "Total Haber";
+            this.BancLblTotalHaber.AutoSize = true;
+            this.BancLblTotalHaber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
+            this.BancLblTotalHaber.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.BancLblTotalHaber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
+            this.BancLblTotalHaber.Location = new System.Drawing.Point(332, 420);
+            this.BancLblTotalHaber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BancLblTotalHaber.Name = "BancLblTotalHaber";
+            this.BancLblTotalHaber.Size = new System.Drawing.Size(78, 14);
+            this.BancLblTotalHaber.TabIndex = 25;
+            this.BancLblTotalHaber.Text = "Total Haber";
             // 
-            // label9
+            // BancLblDiferencia
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
-            this.label9.Location = new System.Drawing.Point(658, 522);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 15);
-            this.label9.TabIndex = 26;
-            this.label9.Text = "Diferencia";
+            this.BancLblDiferencia.AutoSize = true;
+            this.BancLblDiferencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
+            this.BancLblDiferencia.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.BancLblDiferencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
+            this.BancLblDiferencia.Location = new System.Drawing.Point(527, 420);
+            this.BancLblDiferencia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BancLblDiferencia.Name = "BancLblDiferencia";
+            this.BancLblDiferencia.Size = new System.Drawing.Size(67, 14);
+            this.BancLblDiferencia.TabIndex = 26;
+            this.BancLblDiferencia.Text = "Diferencia";
             // 
-            // pictureBox11
+            // BancLblTipoPeriodo
             // 
-            this.pictureBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
-            this.pictureBox11.Image = global::CapaVista_EnlaceB.Properties.Resources._81;
-            this.pictureBox11.Location = new System.Drawing.Point(936, 356);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(205, 249);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 27;
-            this.pictureBox11.TabStop = false;
+            this.BancLblTipoPeriodo.AutoSize = true;
+            this.BancLblTipoPeriodo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
+            this.BancLblTipoPeriodo.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BancLblTipoPeriodo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(74)))), ((int)(((byte)(48)))));
+            this.BancLblTipoPeriodo.Location = new System.Drawing.Point(19, 35);
+            this.BancLblTipoPeriodo.Name = "BancLblTipoPeriodo";
+            this.BancLblTipoPeriodo.Size = new System.Drawing.Size(123, 18);
+            this.BancLblTipoPeriodo.TabIndex = 9;
+            this.BancLblTipoPeriodo.Text = "Tipo de periodo";
             // 
-            // pictureBox10
+            // dateTimePicker1
             // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.Image = global::CapaVista_EnlaceB.Properties.Resources.BalanzaOro;
-            this.pictureBox10.Location = new System.Drawing.Point(565, 522);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(74, 65);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 23;
-            this.pictureBox10.TabStop = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(251, 56);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(232, 20);
+            this.dateTimePicker1.TabIndex = 10;
             // 
-            // pictureBox9
+            // dateTimePicker2
             // 
-            this.pictureBox9.Image = global::CapaVista_EnlaceB.Properties.Resources.BolsaDorada;
-            this.pictureBox9.Location = new System.Drawing.Point(319, 522);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(74, 65);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 22;
-            this.pictureBox9.TabStop = false;
+            this.dateTimePicker2.Location = new System.Drawing.Point(521, 56);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(217, 20);
+            this.dateTimePicker2.TabIndex = 11;
             // 
-            // pictureBox8
+            // BancCbxPeriodo
             // 
-            this.pictureBox8.Image = global::CapaVista_EnlaceB.Properties.Resources.MonedaOro;
-            this.pictureBox8.Location = new System.Drawing.Point(64, 522);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(74, 65);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 21;
-            this.pictureBox8.TabStop = false;
+            this.BancCbxPeriodo.FormattingEnabled = true;
+            this.BancCbxPeriodo.Items.AddRange(new object[] {
+            "Mensual",
+            "Anual"});
+            this.BancCbxPeriodo.Location = new System.Drawing.Point(22, 54);
+            this.BancCbxPeriodo.Name = "BancCbxPeriodo";
+            this.BancCbxPeriodo.Size = new System.Drawing.Size(176, 21);
+            this.BancCbxPeriodo.TabIndex = 12;
             // 
-            // pictureBox7
+            // label1
             // 
-            this.pictureBox7.Image = global::CapaVista_EnlaceB.Properties.Resources.FondoEnlaceotrosModulo;
-            this.pictureBox7.Location = new System.Drawing.Point(569, 522);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(175, 65);
-            this.pictureBox7.TabIndex = 20;
-            this.pictureBox7.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(614, 504);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(228, 16);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "El traslado solicitará confirmación.";
             // 
-            // pictureBox6
+            // button1
             // 
-            this.pictureBox6.Image = global::CapaVista_EnlaceB.Properties.Resources.FondoEnlaceotrosModulo;
-            this.pictureBox6.Location = new System.Drawing.Point(319, 522);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(175, 65);
-            this.pictureBox6.TabIndex = 19;
-            this.pictureBox6.TabStop = false;
+            this.button1.BackgroundImage = global::CapaVista_EnlaceB.Properties.Resources.btn_advertenciaV;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(585, 499);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(23, 26);
+            this.button1.TabIndex = 29;
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // pictureBox5
+            // BancPbxMascota
             // 
-            this.pictureBox5.Image = global::CapaVista_EnlaceB.Properties.Resources.FondoEnlaceotrosModulo;
-            this.pictureBox5.Location = new System.Drawing.Point(64, 522);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(175, 65);
-            this.pictureBox5.TabIndex = 18;
-            this.pictureBox5.TabStop = false;
+            this.BancPbxMascota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(243)))));
+            this.BancPbxMascota.Image = global::CapaVista_EnlaceB.Properties.Resources.Mascota_bancaria;
+            this.BancPbxMascota.Location = new System.Drawing.Point(702, 289);
+            this.BancPbxMascota.Margin = new System.Windows.Forms.Padding(2);
+            this.BancPbxMascota.Name = "BancPbxMascota";
+            this.BancPbxMascota.Size = new System.Drawing.Size(154, 202);
+            this.BancPbxMascota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BancPbxMascota.TabIndex = 27;
+            this.BancPbxMascota.TabStop = false;
             // 
-            // pictureBox4
+            // BancPbxBalanza
             // 
-            this.pictureBox4.Image = global::CapaVista_EnlaceB.Properties.Resources.FondoEnlaceotrosModulo;
-            this.pictureBox4.Location = new System.Drawing.Point(34, 356);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(1107, 299);
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
+            this.BancPbxBalanza.BackColor = System.Drawing.Color.Transparent;
+            this.BancPbxBalanza.Image = global::CapaVista_EnlaceB.Properties.Resources.BalanzaOro;
+            this.BancPbxBalanza.Location = new System.Drawing.Point(457, 420);
+            this.BancPbxBalanza.Margin = new System.Windows.Forms.Padding(2);
+            this.BancPbxBalanza.Name = "BancPbxBalanza";
+            this.BancPbxBalanza.Size = new System.Drawing.Size(56, 53);
+            this.BancPbxBalanza.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BancPbxBalanza.TabIndex = 23;
+            this.BancPbxBalanza.TabStop = false;
             // 
-            // pictureBox3
+            // BancPbxBolsa
             // 
-            this.pictureBox3.Image = global::CapaVista_EnlaceB.Properties.Resources.FondoEnlaceotrosModulo;
-            this.pictureBox3.Location = new System.Drawing.Point(34, 199);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1107, 151);
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
+            this.BancPbxBolsa.Image = global::CapaVista_EnlaceB.Properties.Resources.BolsaDorada;
+            this.BancPbxBolsa.Location = new System.Drawing.Point(272, 420);
+            this.BancPbxBolsa.Margin = new System.Windows.Forms.Padding(2);
+            this.BancPbxBolsa.Name = "BancPbxBolsa";
+            this.BancPbxBolsa.Size = new System.Drawing.Size(56, 53);
+            this.BancPbxBolsa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BancPbxBolsa.TabIndex = 22;
+            this.BancPbxBolsa.TabStop = false;
             // 
-            // pictureBox2
+            // BancPbxMoneda
             // 
-            this.pictureBox2.Image = global::CapaVista_EnlaceB.Properties.Resources.FondoEnlaceotrosModulo;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1107, 107);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.BancPbxMoneda.Image = global::CapaVista_EnlaceB.Properties.Resources.MonedaOro;
+            this.BancPbxMoneda.Location = new System.Drawing.Point(81, 420);
+            this.BancPbxMoneda.Margin = new System.Windows.Forms.Padding(2);
+            this.BancPbxMoneda.Name = "BancPbxMoneda";
+            this.BancPbxMoneda.Size = new System.Drawing.Size(56, 53);
+            this.BancPbxMoneda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BancPbxMoneda.TabIndex = 21;
+            this.BancPbxMoneda.TabStop = false;
             // 
-            // pictureBox1
+            // BancPbxDiferencia
             // 
-            this.pictureBox1.Image = global::CapaVista_EnlaceB.Properties.Resources.FondoEnlaceotrosModulo;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1225, 668);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.BancPbxDiferencia.Image = global::CapaVista_EnlaceB.Properties.Resources.FondoEnlaceotrosModulo;
+            this.BancPbxDiferencia.Location = new System.Drawing.Point(460, 420);
+            this.BancPbxDiferencia.Margin = new System.Windows.Forms.Padding(2);
+            this.BancPbxDiferencia.Name = "BancPbxDiferencia";
+            this.BancPbxDiferencia.Size = new System.Drawing.Size(142, 53);
+            this.BancPbxDiferencia.TabIndex = 20;
+            this.BancPbxDiferencia.TabStop = false;
+            // 
+            // BancPbxHaber
+            // 
+            this.BancPbxHaber.Image = global::CapaVista_EnlaceB.Properties.Resources.FondoEnlaceotrosModulo;
+            this.BancPbxHaber.Location = new System.Drawing.Point(272, 420);
+            this.BancPbxHaber.Margin = new System.Windows.Forms.Padding(2);
+            this.BancPbxHaber.Name = "BancPbxHaber";
+            this.BancPbxHaber.Size = new System.Drawing.Size(142, 53);
+            this.BancPbxHaber.TabIndex = 19;
+            this.BancPbxHaber.TabStop = false;
+            // 
+            // BancPbxDebe
+            // 
+            this.BancPbxDebe.Image = global::CapaVista_EnlaceB.Properties.Resources.FondoEnlaceotrosModulo;
+            this.BancPbxDebe.Location = new System.Drawing.Point(81, 420);
+            this.BancPbxDebe.Margin = new System.Windows.Forms.Padding(2);
+            this.BancPbxDebe.Name = "BancPbxDebe";
+            this.BancPbxDebe.Size = new System.Drawing.Size(144, 53);
+            this.BancPbxDebe.TabIndex = 18;
+            this.BancPbxDebe.TabStop = false;
+            // 
+            // BancBtnCerrar
+            // 
+            this.BancBtnCerrar.BackColor = System.Drawing.Color.Green;
+            this.BancBtnCerrar.BackgroundImage = global::CapaVista_EnlaceB.Properties.Resources.btn_salirV;
+            this.BancBtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BancBtnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BancBtnCerrar.ForeColor = System.Drawing.Color.White;
+            this.BancBtnCerrar.Location = new System.Drawing.Point(852, 7);
+            this.BancBtnCerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.BancBtnCerrar.Name = "BancBtnCerrar";
+            this.BancBtnCerrar.Size = new System.Drawing.Size(55, 52);
+            this.BancBtnCerrar.TabIndex = 16;
+            this.BancBtnCerrar.UseVisualStyleBackColor = false;
+            // 
+            // BancBtnEnviar
+            // 
+            this.BancBtnEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(138)))), ((int)(((byte)(85)))));
+            this.BancBtnEnviar.BackgroundImage = global::CapaVista_EnlaceB.Properties.Resources.btn_enviarV;
+            this.BancBtnEnviar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BancBtnEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BancBtnEnviar.ForeColor = System.Drawing.Color.White;
+            this.BancBtnEnviar.Location = new System.Drawing.Point(547, 337);
+            this.BancBtnEnviar.Margin = new System.Windows.Forms.Padding(2);
+            this.BancBtnEnviar.Name = "BancBtnEnviar";
+            this.BancBtnEnviar.Size = new System.Drawing.Size(55, 54);
+            this.BancBtnEnviar.TabIndex = 15;
+            this.BancBtnEnviar.UseVisualStyleBackColor = false;
+            // 
+            // BancBtnLimpiar
+            // 
+            this.BancBtnLimpiar.BackColor = System.Drawing.Color.Green;
+            this.BancBtnLimpiar.BackgroundImage = global::CapaVista_EnlaceB.Properties.Resources.btn_limpiarV;
+            this.BancBtnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BancBtnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BancBtnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.BancBtnLimpiar.Location = new System.Drawing.Point(617, 337);
+            this.BancBtnLimpiar.Margin = new System.Windows.Forms.Padding(2);
+            this.BancBtnLimpiar.Name = "BancBtnLimpiar";
+            this.BancBtnLimpiar.Size = new System.Drawing.Size(55, 54);
+            this.BancBtnLimpiar.TabIndex = 14;
+            this.BancBtnLimpiar.UseVisualStyleBackColor = false;
+            // 
+            // BancPbxFondoPartida
+            // 
+            this.BancPbxFondoPartida.Image = global::CapaVista_EnlaceB.Properties.Resources.FondoEnlaceotrosModulo;
+            this.BancPbxFondoPartida.Location = new System.Drawing.Point(26, 289);
+            this.BancPbxFondoPartida.Margin = new System.Windows.Forms.Padding(2);
+            this.BancPbxFondoPartida.Name = "BancPbxFondoPartida";
+            this.BancPbxFondoPartida.Size = new System.Drawing.Size(830, 243);
+            this.BancPbxFondoPartida.TabIndex = 12;
+            this.BancPbxFondoPartida.TabStop = false;
+            // 
+            // BancBtnGenerarPartida
+            // 
+            this.BancBtnGenerarPartida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(138)))), ((int)(((byte)(85)))));
+            this.BancBtnGenerarPartida.BackgroundImage = global::CapaVista_EnlaceB.Properties.Resources.btn_generarpartidaV;
+            this.BancBtnGenerarPartida.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BancBtnGenerarPartida.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BancBtnGenerarPartida.ForeColor = System.Drawing.Color.White;
+            this.BancBtnGenerarPartida.Location = new System.Drawing.Point(729, 175);
+            this.BancBtnGenerarPartida.Margin = new System.Windows.Forms.Padding(2);
+            this.BancBtnGenerarPartida.Name = "BancBtnGenerarPartida";
+            this.BancBtnGenerarPartida.Size = new System.Drawing.Size(102, 90);
+            this.BancBtnGenerarPartida.TabIndex = 11;
+            this.BancBtnGenerarPartida.UseVisualStyleBackColor = false;
+            // 
+            // BancPbxFondoMovimientos
+            // 
+            this.BancPbxFondoMovimientos.Image = global::CapaVista_EnlaceB.Properties.Resources.FondoEnlaceotrosModulo;
+            this.BancPbxFondoMovimientos.Location = new System.Drawing.Point(26, 162);
+            this.BancPbxFondoMovimientos.Margin = new System.Windows.Forms.Padding(2);
+            this.BancPbxFondoMovimientos.Name = "BancPbxFondoMovimientos";
+            this.BancPbxFondoMovimientos.Size = new System.Drawing.Size(830, 123);
+            this.BancPbxFondoMovimientos.TabIndex = 9;
+            this.BancPbxFondoMovimientos.TabStop = false;
+            // 
+            // BancBtnConsultarMovimientos
+            // 
+            this.BancBtnConsultarMovimientos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(138)))), ((int)(((byte)(85)))));
+            this.BancBtnConsultarMovimientos.BackgroundImage = global::CapaVista_EnlaceB.Properties.Resources.btn_consultarV;
+            this.BancBtnConsultarMovimientos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BancBtnConsultarMovimientos.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BancBtnConsultarMovimientos.ForeColor = System.Drawing.Color.White;
+            this.BancBtnConsultarMovimientos.Location = new System.Drawing.Point(749, 13);
+            this.BancBtnConsultarMovimientos.Margin = new System.Windows.Forms.Padding(2);
+            this.BancBtnConsultarMovimientos.Name = "BancBtnConsultarMovimientos";
+            this.BancBtnConsultarMovimientos.Size = new System.Drawing.Size(67, 62);
+            this.BancBtnConsultarMovimientos.TabIndex = 8;
+            this.BancBtnConsultarMovimientos.UseVisualStyleBackColor = false;
+            // 
+            // BancPbxFondoEnlace
+            // 
+            this.BancPbxFondoEnlace.Image = global::CapaVista_EnlaceB.Properties.Resources.FondoEnlaceotrosModulo;
+            this.BancPbxFondoEnlace.Location = new System.Drawing.Point(0, 0);
+            this.BancPbxFondoEnlace.Margin = new System.Windows.Forms.Padding(2);
+            this.BancPbxFondoEnlace.Name = "BancPbxFondoEnlace";
+            this.BancPbxFondoEnlace.Size = new System.Drawing.Size(830, 87);
+            this.BancPbxFondoEnlace.TabIndex = 0;
+            this.BancPbxFondoEnlace.TabStop = false;
+            // 
+            // BancPbxFondo
+            // 
+            this.BancPbxFondo.Image = global::CapaVista_EnlaceB.Properties.Resources.FondoEnlaceotrosModulo;
+            this.BancPbxFondo.Location = new System.Drawing.Point(1, 0);
+            this.BancPbxFondo.Margin = new System.Windows.Forms.Padding(2);
+            this.BancPbxFondo.Name = "BancPbxFondo";
+            this.BancPbxFondo.Size = new System.Drawing.Size(919, 543);
+            this.BancPbxFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.BancPbxFondo.TabIndex = 0;
+            this.BancPbxFondo.TabStop = false;
             // 
             // FrmEnlaceOtrosModulos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1224, 667);
-            this.Controls.Add(this.pictureBox11);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(918, 542);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.BancPbxMascota);
+            this.Controls.Add(this.BancLblDiferencia);
+            this.Controls.Add(this.BancLblTotalHaber);
+            this.Controls.Add(this.BancLblTotalDebe);
+            this.Controls.Add(this.BancPbxBalanza);
+            this.Controls.Add(this.BancPbxBolsa);
+            this.Controls.Add(this.BancPbxMoneda);
+            this.Controls.Add(this.BancPbxDiferencia);
+            this.Controls.Add(this.BancPbxHaber);
+            this.Controls.Add(this.BancPbxDebe);
+            this.Controls.Add(this.BancDgvPartidaContable);
+            this.Controls.Add(this.BancBtnCerrar);
+            this.Controls.Add(this.BancBtnEnviar);
+            this.Controls.Add(this.BancBtnLimpiar);
+            this.Controls.Add(this.BancLblPartidaContable);
+            this.Controls.Add(this.BancPbxFondoPartida);
+            this.Controls.Add(this.BancBtnGenerarPartida);
+            this.Controls.Add(this.BancDgvMovimientos);
+            this.Controls.Add(this.BancLblMovimientos);
+            this.Controls.Add(this.BancPbxFondoMovimientos);
+            this.Controls.Add(this.BancPnlFiltros);
+            this.Controls.Add(this.BancLblTitulo);
+            this.Controls.Add(this.BancPbxFondo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "FrmEnlaceOtrosModulos";
-            this.Text = "FrmEnlaceOtrosModulos";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "8001 – EnlaceOtrosModulos";
+            this.BancPnlFiltros.ResumeLayout(false);
+            this.BancPnlFiltros.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BancDgvMovimientos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancDgvPartidaContable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxMascota)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxBalanza)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxBolsa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxMoneda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxDiferencia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxHaber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxDebe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxFondoPartida)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxFondoMovimientos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxFondoEnlace)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BancPbxFondo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -521,45 +609,49 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.PictureBox BancPbxFondo;
+        private System.Windows.Forms.Label BancLblTitulo;
+        private System.Windows.Forms.Panel BancPnlFiltros;
+        private System.Windows.Forms.Label BancLblTituloPanel;
+        private System.Windows.Forms.PictureBox BancPbxFondoEnlace;
+        private System.Windows.Forms.Button BancBtnConsultarMovimientos;
+        private System.Windows.Forms.Label BancLblFechaFinal;
+        private System.Windows.Forms.Label BancLblFechaInicial;
+        private System.Windows.Forms.PictureBox BancPbxFondoMovimientos;
+        private System.Windows.Forms.Label BancLblMovimientos;
+        private System.Windows.Forms.DataGridView BancDgvMovimientos;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Estatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Referencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Concepto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Póliza;
         private System.Windows.Forms.DataGridViewTextBoxColumn Importe_GTQ;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button BancBtnGenerarPartida;
+        private System.Windows.Forms.Label BancLblPartidaContable;
+        private System.Windows.Forms.Button BancBtnLimpiar;
+        private System.Windows.Forms.Button BancBtnEnviar;
+        private System.Windows.Forms.Button BancBtnCerrar;
+        private System.Windows.Forms.DataGridView BancDgvPartidaContable;
         private System.Windows.Forms.DataGridViewTextBoxColumn Código_de_Cuenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_de_cuenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Debe;
         private System.Windows.Forms.DataGridViewTextBoxColumn Haber;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox BancPbxFondoPartida;
+        private System.Windows.Forms.PictureBox BancPbxDebe;
+        private System.Windows.Forms.PictureBox BancPbxHaber;
+        private System.Windows.Forms.PictureBox BancPbxDiferencia;
+        private System.Windows.Forms.PictureBox BancPbxMoneda;
+        private System.Windows.Forms.PictureBox BancPbxBolsa;
+        private System.Windows.Forms.PictureBox BancPbxBalanza;
+        private System.Windows.Forms.Label BancLblTotalDebe;
+        private System.Windows.Forms.Label BancLblTotalHaber;
+        private System.Windows.Forms.Label BancLblDiferencia;
+        private System.Windows.Forms.PictureBox BancPbxMascota;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label BancLblTipoPeriodo;
+        private System.Windows.Forms.ComboBox BancCbxPeriodo;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
